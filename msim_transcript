@@ -1,0 +1,62 @@
+# Reading pref.tcl
+# do Majority_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/MSEE/5361/Week3/Assignment3 {D:/MSEE/5361/Week3/Assignment3/AAC2M3P4.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:43:54 on Nov 20,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/MSEE/5361/Week3/Assignment3" D:/MSEE/5361/Week3/Assignment3/AAC2M3P4.v 
+# -- Compiling module Majority
+# 
+# Top level modules:
+# 	Majority
+# End time: 15:43:54 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work D:/MSEE/5361/Week3/Assignment3/AAC2M3P4_tb.vp
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:43:58 on Nov 20,2022
+# vlog -reportprogress 300 -work work D:/MSEE/5361/Week3/Assignment3/AAC2M3P4_tb.vp 
+# -- Compiling module AAC2M3P4_tb
+# 
+# Top level modules:
+# 	AAC2M3P4_tb
+# End time: 15:43:58 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.AAC2M3P4_tb
+# vsim work.AAC2M3P4_tb 
+# Start time: 15:44:02 on Nov 20,2022
+# Loading work.AAC2M3P4_tb
+# Loading work.Majority
+add wave -position end  sim:/AAC2M3P4_tb/delay
+add wave -position end  sim:/AAC2M3P4_tb/a_tb
+add wave -position end  sim:/AAC2M3P4_tb/b_tb
+add wave -position end  sim:/AAC2M3P4_tb/c_tb
+add wave -position end  sim:/AAC2M3P4_tb/y_tb
+add wave -position end  sim:/AAC2M3P4_tb/i
+add wave -position end  sim:/AAC2M3P4_tb/j
+add wave -position end  sim:/AAC2M3P4_tb/k
+add wave -position end  sim:/AAC2M3P4_tb/ErrorCount
+add wave -position end  sim:/AAC2M3P4_tb/score
+add wave -position end  sim:/AAC2M3P4_tb/FirstError
+add wave -position end  sim:/AAC2M3P4_tb/ValidCheck
+add wave -position end  sim:/AAC2M3P4_tb/testresults
+add wave -position end  sim:/AAC2M3P4_tb/vector
+add wave -position end  sim:/AAC2M3P4_tb/address
+add wave -position end  sim:/AAC2M3P4_tb/data
+add wave -position end  sim:/AAC2M3P4_tb/rom
+run -all
+# This simulation is complete
+# ** Note: $stop    : D:/MSEE/5361/Week3/Assignment3/AAC2M3P4_tb.vp(115)
+#    Time: 90 ns  Iteration: 0  Instance: /AAC2M3P4_tb
+# Break in Module AAC2M3P4_tb in file D:/MSEE/5361/Week3/Assignment3/AAC2M3P4_tb.vp
+# End time: 15:46:11 on Nov 20,2022, Elapsed time: 0:02:09
+# Errors: 0, Warnings: 0
